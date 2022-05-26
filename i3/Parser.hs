@@ -39,10 +39,10 @@ arOperators =
     , InfixL (IntOpExp "/" <$ symbol "/") ]
   , [ InfixL (IntOpExp "+" <$ symbol "+")
     , InfixL (IntOpExp "-" <$ symbol "-") ]
-  , [ InfixN (IntCompExp "<" <$ symbol "<")
-    , InfixN (IntCompExp "<=" <$ symbol "<=")
-    , InfixN (IntCompExp ">" <$ symbol ">")
+  , [ InfixN (IntCompExp "<=" <$ symbol "<=")
+    , InfixN (IntCompExp "<" <$ symbol "<")
     , InfixN (IntCompExp ">=" <$ symbol ">=")
+    , InfixN (IntCompExp ">" <$ symbol ">")
     , InfixN (IntCompExp "==" <$ symbol "==")
     , InfixN (IntCompExp "/=" <$ symbol "/=") ]
   , [ InfixL (BoolOpExp "&&" <$ symbol "&&")
