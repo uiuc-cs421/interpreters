@@ -64,12 +64,12 @@ arOperators =
     , InfixL (IntOpExp "/" <$ symbol "/") ]
   , [ InfixL (IntOpExp "+" <$ symbol "+")
     , InfixL (IntOpExp "-" <$ symbol "-") ]
-  , [ InfixN (IntCompExp "<=" <$ symbol "<=")
-    , InfixN (IntCompExp "<" <$ symbol "<")
-    , InfixN (IntCompExp ">=" <$ symbol ">=")
-    , InfixN (IntCompExp ">" <$ symbol ">")
-    , InfixN (IntCompExp "==" <$ symbol "==")
-    , InfixN (IntCompExp "/=" <$ symbol "/=") ]
+  , [ InfixN (RelOpExp "<=" <$ symbol "<=")
+    , InfixN (RelOpExp "<" <$ symbol "<")
+    , InfixN (RelOpExp ">=" <$ symbol ">=")
+    , InfixN (RelOpExp ">" <$ symbol ">")
+    , InfixN (RelOpExp "==" <$ symbol "==")
+    , InfixN (RelOpExp "/=" <$ symbol "/=") ]
   , [ InfixL (BoolOpExp "&&" <$ symbol "&&")
     , InfixL (BoolOpExp "||" <$ symbol "||") ]
   ]
