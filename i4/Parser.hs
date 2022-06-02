@@ -58,10 +58,13 @@ letExp = do rword "let"
             rword "end"
             return $ LetExp v e1 e2
 
+-- Copied from https://hackage.haskell.org/package/megaparsec-6.4.0/docs/Text-Megaparsec-Expr.html
+notFollowedByEq n = (lexeme . try) (string n <* notFollowedBy (symbol "="))
+
 arOperators :: [[Operator Parser Exp]]
 arOperators =
   [ [ InfixL (IntOpExp "*" <$ symbol "*")
-    , InfixL (IntOpExp "/" <$ symbol "/") ]
+    , InfixL (IntOpExp "/" <$ notFollowedByEq "/") ]
   , [ InfixL (IntOpExp "+" <$ symbol "+")
     , InfixL (IntOpExp "-" <$ symbol "-") ]
   , [ InfixN (RelOpExp "<=" <$ symbol "<=")
