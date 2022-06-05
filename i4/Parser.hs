@@ -65,6 +65,7 @@ ifExp = do rword "if"
            e1 <- anExp
            rword "else"
            e2 <- anExp
+           rword "fi"
            return $ IfExp c e1 e2
 
 -- Copied from https://hackage.haskell.org/package/megaparsec-6.4.0/docs/Text-Megaparsec-Expr.html
